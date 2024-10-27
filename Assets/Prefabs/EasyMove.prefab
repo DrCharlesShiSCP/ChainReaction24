@@ -53,6 +53,10 @@ PrefabInstance:
       propertyPath: flagLeft
       value: 
       objectReference: {fileID: 8776821411759067832}
+    - target: {fileID: 3874996067246935374, guid: f54fc318dd8606f4ebbab3148a1cefca, type: 3}
+      propertyPath: filter
+      value: 
+      objectReference: {fileID: 3895110998905529283}
     - target: {fileID: 4657681318998330506, guid: f54fc318dd8606f4ebbab3148a1cefca, type: 3}
       propertyPath: m_Name
       value: PlayerComp
@@ -215,6 +219,11 @@ PrefabInstance:
 --- !u!224 &2252274766303000805 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4258373907865988732, guid: 0a431c03b413a8b4c8ce13a38eed732b, type: 3}
+  m_PrefabInstance: {fileID: 2619238416494368409}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3895110998905529283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1321614791735719258, guid: 0a431c03b413a8b4c8ce13a38eed732b, type: 3}
   m_PrefabInstance: {fileID: 2619238416494368409}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &4478084884073026005 stripped
