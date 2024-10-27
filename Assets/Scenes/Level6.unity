@@ -3991,9 +3991,33 @@ PrefabInstance:
       propertyPath: maxflags
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2051255471080481296, guid: 1c1ed2ab363aa6f4e99dc957862431d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051255471080481296, guid: 1c1ed2ab363aa6f4e99dc957862431d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051255471080481296, guid: 1c1ed2ab363aa6f4e99dc957862431d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2203044859828236344, guid: 1c1ed2ab363aa6f4e99dc957862431d3, type: 3}
       propertyPath: maxExplosives
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2887942216884128619, guid: 1c1ed2ab363aa6f4e99dc957862431d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2887942216884128619, guid: 1c1ed2ab363aa6f4e99dc957862431d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2887942216884128619, guid: 1c1ed2ab363aa6f4e99dc957862431d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4556151141782098988, guid: 1c1ed2ab363aa6f4e99dc957862431d3, type: 3}
       propertyPath: landmines.Array.size

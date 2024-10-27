@@ -52,7 +52,6 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetVolume(float volume)
     {
-        // Convert linear volume (0-1) to decibels for AudioMixer
         audioMixer.SetFloat("Volume", Mathf.Log10(volume) * 20);
     }
 }

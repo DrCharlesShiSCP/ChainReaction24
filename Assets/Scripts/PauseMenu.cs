@@ -3,13 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject pauseMenu; 
+    public GameObject pauseMenu;
+    public GameObject settingsMenu;
 
     private bool isPaused = false;
 
     void Start()
     {
         pauseMenu.SetActive(false);
+        settingsMenu.SetActive(false);
         Time.timeScale = 1;
     }
 
@@ -31,8 +33,20 @@ public class PauseMenu : MonoBehaviour
 
         Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = isPaused;
-    }
+        if (settingsMenu.activeSelf)
+        {
+            settingsMenu.SetActive(false);
+        }
 
+    }
+    public void closeSettings()
+    {
+        settingsMenu.SetActive(false);
+    }
+    public void SettingsOpen()
+    {
+        settingsMenu.SetActive(true);
+    }
     public void ResumeGame()
     {
         isPaused = false;
