@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class WinLoseDetector : MonoBehaviour
 {
     public List<GameObject> landmines; // List of landmines to check
     public GameObject winScr;
     public GameObject LoseScr;
+    public float checkDelay;
 
     void Start()
     {
@@ -15,7 +17,8 @@ public class WinLoseDetector : MonoBehaviour
 
     public void DetonateCheck()
     {
-        Invoke("CheckWinOrLose", 5f);
+        Debug.LogWarning("isDoingDetoCheck");
+        Invoke("CheckWinOrLose", checkDelay);
     }
     public void CheckWinOrLose()
     {
@@ -42,17 +45,17 @@ public class WinLoseDetector : MonoBehaviour
 
     void Win()
     {
+        Cursor.lockState = CursorLockMode.None;
         winScr.SetActive(true);
-        Debug.Log("You Win! All landmines have been destroyed.");
+        Debug.LogWarning("You Win! All landmines have been destroyed.");
         Time.timeScale = 0f;
-        // Add any additional winning logic here
     }
 
     void Lose()
     {
+        Cursor.lockState = CursorLockMode.None;
         LoseScr.SetActive(true);
-        Debug.Log("You Lose! Not all landmines are destroyed.");
+        Debug.LogWarning("You Lose! Not all landmines are destroyed.");
         Time.timeScale = 0f;
-        // Add any additional losing logic here
     }
 }

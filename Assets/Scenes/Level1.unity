@@ -10065,10 +10065,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
       propertyPath: WhenButtonIsPressed.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
       propertyPath: WhenButtonIsPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
+      propertyPath: WhenButtonIsPressed.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
@@ -10076,7 +10080,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1945815201}
     - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
+      propertyPath: WhenButtonIsPressed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 8095249469755155515}
+    - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
       propertyPath: WhenButtonIsPressed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
+      propertyPath: WhenButtonIsPressed.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
@@ -10084,11 +10096,23 @@ PrefabInstance:
       value: TriggerExplosion
       objectReference: {fileID: 0}
     - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
+      propertyPath: WhenButtonIsPressed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DetonateCheck
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
       propertyPath: WhenButtonIsPressed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: MineExplosion, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
+      propertyPath: WhenButtonIsPressed.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: WinLoseDetector, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
       propertyPath: WhenButtonIsPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
+      propertyPath: WhenButtonIsPressed.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -11978,6 +12002,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c1ed2ab363aa6f4e99dc957862431d3, type: 3}
+--- !u!114 &8095249469755155515 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4556151141782098988, guid: 1c1ed2ab363aa6f4e99dc957862431d3, type: 3}
+  m_PrefabInstance: {fileID: 8095249469755155514}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa1bc11a4b3d6994abe19e6c9ca9776e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

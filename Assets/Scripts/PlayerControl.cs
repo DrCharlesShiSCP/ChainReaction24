@@ -51,7 +51,7 @@ public class PlayerControl : MonoBehaviour
             Invoke("resetJump", 1f);
         }else
         {
-            Debug.LogWarning("jumped");
+            Debug.Log("jumped");
         }
 
         velocity.y += gravity * Time.deltaTime;
