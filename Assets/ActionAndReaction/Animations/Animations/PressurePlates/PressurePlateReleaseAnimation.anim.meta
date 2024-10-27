@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b514e848448ac5543a5ca86fc8d9d600
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 144594
+  packageName: Action and reaction pack - Interactive objects
+  packageVersion: 1.0
+  assetPath: Assets/ActionAndReaction/Animations/Animations/PressurePlates/PressurePlateReleaseAnimation.anim
+  uploadId: 339445

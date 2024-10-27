@@ -1,23 +1,28 @@
 using UnityEngine;
+using TMPro;
 
 public class PlacingPickup : MonoBehaviour
 {
-    public GameObject explosivePrefab; 
-    public float placementRange = 5f; 
+    public GadgetSwitch gadgetSwitcher; // Reference to the GadgetSwitcher script
+    public GameObject explosivePrefab;
+    public float placementRange = 5f;
     public LayerMask placementLayerMask; // Layer mask to specify valid placement surfaces
-    public int maxExplosives = 5; 
+    public int maxExplosives = 5;
+    public TextMeshProUGUI bombCount;
 
     private Camera playerCamera;
     private int currentExplosiveCount = 0; // Current count of placed explosives
 
     void Start()
     {
+        gadgetSwitcher = gadgetSwitcher = Object.FindFirstObjectByType<GadgetSwitch>();
         playerCamera = Camera.main; // Get the main camera
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Left mouse button for placing an explosive
+        bombCount.text = "Explosives Left:" + (maxExplosives - currentExplosiveCount);
+        if (Input.GetMouseButtonDown(0) && IsExplosiveEquipped()) // Left mouse button for placing an explosive
         {
             TryPlaceExplosive();
         }
@@ -28,9 +33,23 @@ public class PlacingPickup : MonoBehaviour
         }
     }
 
+    private bool IsExplosiveEquipped()
+    {
+        gadgetSwitcher = gadgetSwitcher = Object.FindFirstObjectByType<GadgetSwitch>();
+        if (gadgetSwitcher == null)
+        {
+            Debug.LogWarning("GadgetSwitcher reference is missing.");
+            return false;
+        }
+
+        bool isEquipped = gadgetSwitcher.currentGadget == Gadget.Explosives;
+        Debug.Log("Is Explosive Equipped: " + isEquipped);
+        return isEquipped;
+    }
+
+
     private void TryPlaceExplosive()
     {
-        // Check if the maximum limit of explosives has been reached
         if (currentExplosiveCount >= maxExplosives)
         {
             Debug.Log("Maximum number of explosives reached.");

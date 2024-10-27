@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0a682c67d04cc8c40b274fc8d45b37ae
+timeCreated: 1573989115
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 144594
+  packageName: Action and reaction pack - Interactive objects
+  packageVersion: 1.0
+  assetPath: Assets/ActionAndReaction/Models/Materials/Material.001.mat
+  uploadId: 339445

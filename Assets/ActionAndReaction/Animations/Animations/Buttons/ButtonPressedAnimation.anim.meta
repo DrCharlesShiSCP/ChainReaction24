@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4b4d7540b48523246931dd90c1b0a74a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 144594
+  packageName: Action and reaction pack - Interactive objects
+  packageVersion: 1.0
+  assetPath: Assets/ActionAndReaction/Animations/Animations/Buttons/ButtonPressedAnimation.anim
+  uploadId: 339445

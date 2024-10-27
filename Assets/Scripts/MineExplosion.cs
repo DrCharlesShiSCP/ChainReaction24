@@ -3,13 +3,22 @@ using UnityEngine;
 
 public class MineExplosion : MonoBehaviour
 {
-    public GameObject explosionEffect; // Placeholder for explosion particle effect
-    public float destructionDelay = 2f; // Delay before the mine is destroyed, allowing effect to play
-    private bool hasExploded = false; // To prevent multiple explosions of the same mine
+    public GameObject explosionEffect; 
+    public float destructionDelay = 2f; 
+    public AudioClip explosionSound; 
+    private AudioSource audioSource;
+    private bool hasExploded = false; 
+
+    void Start()
+    {
+        // Initialize AudioSource
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = explosionSound;
+        audioSource.playOnAwake = false; // Prevent sound from playing immediately
+    }
 
     public void TriggerExplosion()
     {
-        Debug.Log("triggered");
         if (hasExploded) return; // Avoid multiple explosions on the same mine
         hasExploded = true;
 
@@ -19,7 +28,13 @@ public class MineExplosion : MonoBehaviour
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
         }
 
-        Invoke("testDestroy", 1f);
+        // Play explosion sound
+        if (explosionSound != null)
+        {
+            audioSource.Play();
+        }
+
+        Invoke("testDestroy", destructionDelay); 
     }
 
     public void testDestroy()
@@ -29,7 +44,11 @@ public class MineExplosion : MonoBehaviour
         {
             detection.TriggerDetection();
         }
+        Invoke("DestoryMine", 1f);
+    }
+
+    public void DestoryMine()
+    {
         Destroy(gameObject);
-        Debug.Log("destoryed");
     }
 }

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ed6c4ceba0d4cbe4f8dd3486865dce38
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 144594
+  packageName: Action and reaction pack - Interactive objects
+  packageVersion: 1.0
+  assetPath: Assets/ActionAndReaction/Scripts/Lever+Switch/SwitchScript.cs
+  uploadId: 339445
