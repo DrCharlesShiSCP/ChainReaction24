@@ -9,6 +9,7 @@ public class MineExplosion : MonoBehaviour
 
     public void TriggerExplosion()
     {
+        Debug.Log("triggered");
         if (hasExploded) return; // Avoid multiple explosions on the same mine
         hasExploded = true;
 
@@ -18,20 +19,17 @@ public class MineExplosion : MonoBehaviour
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
         }
 
-        // Start the destruction delay
-        StartCoroutine(DestroyAfterDelay());
+        Invoke("testDestroy", 1f);
+    }
 
-        // Trigger detection for chain reaction (if applicable)
+    public void testDestroy()
+    {
         MineDetection detection = GetComponent<MineDetection>();
         if (detection != null)
         {
             detection.TriggerDetection();
         }
-    }
-
-    IEnumerator DestroyAfterDelay()
-    {
-        yield return new WaitForSeconds(destructionDelay);
-        Destroy(gameObject); // Destroy this mine after delay
+        Destroy(gameObject);
+        Debug.Log("destoryed");
     }
 }
