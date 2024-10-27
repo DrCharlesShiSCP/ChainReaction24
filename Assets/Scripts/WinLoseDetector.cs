@@ -1,13 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
+using TMPro;
 
 public class WinLoseDetector : MonoBehaviour
 {
-    public List<GameObject> landmines; // List of landmines to check
+    public List<GameObject> landmines;
     public GameObject winScr;
     public GameObject LoseScr;
     public float checkDelay;
+    public TextMeshProUGUI failTextNumber;
+    public int minesLeft;
 
     void Start()
     {
@@ -20,13 +22,27 @@ public class WinLoseDetector : MonoBehaviour
         Debug.LogWarning("isDoingDetoCheck");
         Invoke("CheckWinOrLose", checkDelay);
     }
+
+    public int CountRemainingLandmines()
+    {
+        minesLeft = 0; 
+        foreach (GameObject landmine in landmines)
+        {
+            if (landmine != null) // Only count landmines that have not been destroyed
+            {
+                minesLeft++;
+            }
+        }
+        Debug.Log("Undestroyed landmines left: " + minesLeft);
+        return minesLeft;
+    }
+
     public void CheckWinOrLose()
     {
-        // Check if all landmines are destroyed
         bool allDestroyed = true;
         foreach (GameObject landmine in landmines)
         {
-            if (landmine != null) // If any landmine still exists
+            if (landmine != null) 
             {
                 allDestroyed = false;
                 break;
@@ -57,5 +73,9 @@ public class WinLoseDetector : MonoBehaviour
         LoseScr.SetActive(true);
         Debug.LogWarning("You Lose! Not all landmines are destroyed.");
         Time.timeScale = 0f;
+
+        minesLeft = CountRemainingLandmines();
+
+        failTextNumber.text = "You left " + minesLeft + " landmines undetonated";
     }
 }
