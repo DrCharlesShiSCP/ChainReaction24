@@ -3993,7 +3993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2203044859828236344, guid: 1c1ed2ab363aa6f4e99dc957862431d3, type: 3}
       propertyPath: maxExplosives
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4556151141782098988, guid: 1c1ed2ab363aa6f4e99dc957862431d3, type: 3}
       propertyPath: landmines.Array.size
