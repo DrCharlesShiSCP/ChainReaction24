@@ -1767,7 +1767,7 @@ Transform:
   m_GameObject: {fileID: 362051640996920425}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 4.37, z: 0}
+  m_LocalPosition: {x: 0, y: 7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1812,7 +1812,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 576
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: f8c190e12060b1c43ad7afdcede7d203, type: 2}
   m_TargetDisplay: 0
@@ -6103,7 +6103,7 @@ Transform:
   m_GameObject: {fileID: 3637641056778929989}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.201, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6985,7 +6985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 5
   runSpeed: 10
-  jumpHeight: 1.5
+  jumpHeight: 0.5
   mouseSensitivity: 100
   playerCamera: {fileID: 7982153522845112344}
 --- !u!114 &781939016266837265

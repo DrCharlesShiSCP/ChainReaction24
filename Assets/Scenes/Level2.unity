@@ -3043,6 +3043,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3175680698531798053, guid: 969831842301e92468b5851866f72a32, type: 3}
   m_PrefabInstance: {fileID: 175867215}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &175867218 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1828323595241337956, guid: 969831842301e92468b5851866f72a32, type: 3}
+  m_PrefabInstance: {fileID: 175867215}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175867217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea31689a4a2e19c43877c567553d49d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &177780197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29320,6 +29331,34 @@ PrefabInstance:
     - target: {fileID: 4353950208938234, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
+      propertyPath: WhenButtonIsPressed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
+      propertyPath: WhenButtonIsPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
+      propertyPath: WhenButtonIsPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 175867218}
+    - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
+      propertyPath: WhenButtonIsPressed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
+      propertyPath: WhenButtonIsPressed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerExplosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
+      propertyPath: WhenButtonIsPressed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MineExplosion, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294586742333098, guid: 3d2133d7a1d537544b3ea536b6a67323, type: 3}
+      propertyPath: WhenButtonIsPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

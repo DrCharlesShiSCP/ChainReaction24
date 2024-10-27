@@ -12,8 +12,9 @@ public class PlayerControl : MonoBehaviour
 
     private CharacterController characterController;
     private float yRotation = 0f;
-    private float gravity = -9.81f;
+    private float gravity = -4f;
     private Vector3 velocity;
+    private bool Jumped;
 
     void Start()
     {
@@ -42,15 +43,25 @@ public class PlayerControl : MonoBehaviour
             velocity.y = -2f;
         }
 
-        if (Input.GetButtonDown("Jump") && characterController.isGrounded)
+        if (Input.GetButtonDown("Jump") && !Jumped)
         {
+            Debug.LogWarning("Is jumping");
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            Jumped = true;
+            Invoke("resetJump", 1f);
+        }else
+        {
+            Debug.LogWarning("jumped");
         }
 
         velocity.y += gravity * Time.deltaTime;
         characterController.Move(velocity * Time.deltaTime);
     }
 
+    public void resetJump()
+    {
+        Jumped = false;
+    }
     void HandleMouseLook()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
